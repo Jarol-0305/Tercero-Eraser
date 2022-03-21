@@ -15,7 +15,7 @@ class MovimientosTable extends Migration
     {
         Schema::create('movimientosTable', function (Blueprint $table) {
             $table->id('mov_id');
-            $table->string('mov_nombre');
+            $table->string('mov_detalle');
             $table->string('mov_valor');
             $table->date('mov_fecha');
             $table->foreignId('cat_id')->references('cat_id')->on('CategoryTable');

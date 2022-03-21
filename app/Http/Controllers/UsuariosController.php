@@ -84,4 +84,9 @@ class UsuariosController extends Controller
     {
         //
     }
+
+    public function username()
+    {
+        return 'usu_cedula';
+    }
 }
