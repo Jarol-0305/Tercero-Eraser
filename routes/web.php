@@ -31,3 +31,7 @@ Route::post('/categorias/destroy/{cat_id}','CategoriasController@destroy')->name
 Route::get('/usuarios','UsuariosController@index')->name('usuarios');
 Route::get('/usuarios/create','UsuariosController@create')->name('usuarios.create');
 Route::post('/usuarios/store','UsuariosController@store')->name('usuarios.store');
+
+Route::get('/movimientos','MovimientosController@index')->name('movimientos');
+Route::get('/movimientos/create','MovimientosController@create')->name('movimientos.create');
+Route::post('/movimientos/store','MovimientosController@store')->name('movimientos.store');

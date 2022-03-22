@@ -29,6 +29,7 @@
                 <div class="menu" >
                   <a class="btn btn-info" href="{{route('usuarios')}}">Usuarios</a> 
                   <a class="btn btn-info" href="{{route('categorias')}}">Categorias</a> 
+                  <a class="btn btn-info" href="{{route('movimientos')}}">Movimientos</a>
 
                
                </div>

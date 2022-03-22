@@ -2,8 +2,8 @@
 @section('content')
 <div>
 	
-<div style="font-family: cursive;font-size: 25px;margin-left:40% ;">Lista de las Categorias</div>
-<label style="font-family: cursive;font-size: 25px;margin-left:2% ;">Crear una nueva Categoria</label>
+<div style="font-family: cursive;font-size: 28px;margin-left:40% ;">Lista de las Categorias</div>
+<label style="font-family: cursive;font-size: 24px;margin-left:2% ;">Crear una nueva Categoria</label>
 <a style="margin-left:1% " href="{{route('categorias.create')}}" class="btn btn-success">Nuevo</a>
 
 </div>

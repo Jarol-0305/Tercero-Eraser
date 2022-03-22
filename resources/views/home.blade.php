@@ -15,7 +15,21 @@
                     @endif
 
                   Has inciado session  {{ Auth::user()->usu_usuario }}
+
+                <a href="{{route('movimientos.create')}}" class="btn btn-primary btn-sm">Nuevo</a>
+
                 </div>
+
+
+                <table class="table">
+                    <th>#</th>
+                    <th>mov_detalle</th>
+                    <th>mov_valor</th>
+                    <th>mov_fecha</th>
+                    
+                </table>
+
+
             </div>
         </div>
     </div>
