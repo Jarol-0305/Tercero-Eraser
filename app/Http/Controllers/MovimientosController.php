@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\Categorias;
+use App\Movimientos;
+use Auth;
 use Illuminate\Http\Request;
 
 class MovimientosController extends Controller
@@ -14,8 +16,10 @@ class MovimientosController extends Controller
     public function index()
     {
         //
-        //dd('Hola bb');
-        return view('home');
+        //dd('Hola');
+        //return view('home');
+        // $movimientos=Movimientos::all();
+        //  return view('home.blade.php')->with('movimientos',$movimientos);
     }
 
     /**
@@ -26,8 +30,7 @@ class MovimientosController extends Controller
     public function create()
     {
         $categorias=Categorias::all();
-        return view('movimientos.create')
-        ->with('categorias',$categorias);
+        return view('movimientos.create')->with('categorias',$categorias);
     }
 
     /**
@@ -38,7 +41,12 @@ class MovimientosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       $data=$request->all();
+
+        $data['usu_id']=Auth::user()->usu_id;
+
+          Movimientos::create($data);
+          return redirect(route('home'));
     }
 
     /**

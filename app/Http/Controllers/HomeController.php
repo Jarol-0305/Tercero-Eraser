@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Movimientos;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,7 +23,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $movimientos=Movimientos::all();
+         return view('home')->with('movimientos',$movimientos);
     }
 
 }

@@ -5,33 +5,31 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                  Has inciado session  {{ Auth::user()->usu_usuario }}
-
-                <a href="{{route('movimientos.create')}}" class="btn btn-primary btn-sm">Nuevo</a>
-
+                <div class="card-header">
+                    <div class="row m-1">
+                        
+                <h1 style="font-family:cursive;font-size: 25px;">Lista de movimientos</h1>
+                        
+                <a href="{{route('movimientos.create')}}" style="margin-left:50%;" class="btn btn-success">Nuevo</a>
+                    </div>
                 </div>
-
 
                 <table class="table">
                     <th>#</th>
-                    <th>mov_detalle</th>
-                    <th>mov_valor</th>
-                    <th>mov_fecha</th>
-                    
-                </table>
-
-
+                    <th>Detalle</th>
+                    <th>Valor</th>
+                    <th>Fecha</th>
+                    @foreach($movimientos as $mov)
+                <tr>
+                    <td>{{$loop->iteration}}</td>
+                    <td>{{$mov->mov_detalle}}</td>
+                    <td>{{$mov->mov_valor}}</td>
+                    <td>{{$mov->mov_fecha}}</td>
+                </tr>
+                </table>    
+                </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
+@endforeach
 @endsection
