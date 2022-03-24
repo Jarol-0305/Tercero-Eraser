@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Movimientos;
 use Illuminate\Http\Request;
+use DB;
 
 class HomeController extends Controller
 {
@@ -23,7 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $movimientos=Movimientos::all();
+        //$movimientos=Movimientos::all();
+        $movimientos=DB::select("SELECT * FROM movimientostable m join categorytable c on m.cat_id=c.cat_id");
          return view('home')->with('movimientos',$movimientos);
     }
 

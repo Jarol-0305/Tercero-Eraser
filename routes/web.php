@@ -35,3 +35,6 @@ Route::post('/usuarios/store','UsuariosController@store')->name('usuarios.store'
 Route::get('/movimientos','MovimientosController@index')->name('movimientos');
 Route::get('/movimientos/create','MovimientosController@create')->name('movimientos.create');
 Route::post('/movimientos/store','MovimientosController@store')->name('movimientos.store');
+Route::get('/movimientos/edit/{mov_id}','MovimientosController@edit')->name('movimientos.edit');
+Route::post('/movimientos/update/{mov_id}','MovimientosController@update')->name('movimientos.update');
+Route::post('/movimientos/destroy/{mov_id}','MovimientosController@destroy')->name('movimientos.destroy');
