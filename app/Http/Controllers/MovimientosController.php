@@ -97,6 +97,6 @@ class MovimientosController extends Controller
     {
         //
         movimientos::destroy($id);
-        return redirect(route('movimientos'));
+        return redirect(route('home'));
     }
 }

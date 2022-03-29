@@ -24,28 +24,26 @@
      
   </div>
 
-  <div class="" style="width:510px;margin-left: 40%;">
-    <label  class="form-label">Tipo de categoria</label>
+  <div class="" style="width:568px;margin-left: 39%;">
+    <label  class="form-label" style="margin-left:2%;">Tipo de categoria</label>
     <div class="col-md-6">
         <select name="cat_id" id="cat_id" class="form-control">
-          <option value="">Elija una opcion</option>
-          @foreach($categorias as $cat)
-
-         @if($cat->cat_id==$movimientos->cat_id)
-         @if($cat->cat_id==1)
+          <option disabled>Elija una opcion</option>
+         @foreach($categorias as $cat)
+         @if($cat->cat_tipo==1)
+         <?php
+         $cat->cat_tipo="(Ingreso)";
+         ?>
          @else
+         <?php
+         $cat->cat_tipo="(Egreso)";
+         ?>
          @endif
-              <option selected value=" {{$cat->cat_id}} ">{{$cat->cat_nombre}} (Ingreso)</option>
+         @if($cat->cat_id==$movimientos->cat_id)
+              <option selected value="{{$cat->cat_id}}">{{$cat->cat_nombre}} {{$cat->cat_tipo}}</option>
           @else
-              @if($cat->cat_tipo==1)
-              <option value=" {{$cat->cat_id}} ">{{$cat->cat_nombre}} (Ingreso)</option>
-              @else
-              <option value=" {{$cat->cat_id}} ">{{$cat->cat_nombre}} (Egreso)</option>
-              @endif
-
-         @endif
-
-
+              <option value="{{$cat->cat_id}}">{{$cat->cat_nombre}} {{$cat->cat_tipo}}</option>
+          @endif
 
           @endforeach
         </select>

@@ -14,7 +14,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth');  
     }
 
     /**
@@ -25,8 +25,45 @@ class HomeController extends Controller
     public function index()
     {
         //$movimientos=Movimientos::all();
-        $movimientos=DB::select("SELECT * FROM movimientostable m join categorytable c on m.cat_id=c.cat_id");
-         return view('home')->with('movimientos',$movimientos);
-    }
+        $desde=date('');
+        $hasta=date('');
+        $movimientos=movimientos::all();   
+        $movimientos=DB::select("SELECT * FROM movimientostable m 
+            join categorytable c on m.cat_id=c.cat_id
+            join users s on m.usu_id=s.usu_id");
 
+
+
+         return view('home')
+         ->with('movimientos',$movimientos)
+         ->with('desde',$desde)
+         ->with('hasta',$hasta)
+         ;
+    }
+    public function search(Request $request){
+
+
+        $data=$request->all();
+        $desde=date('Y-m-d');
+        $hasta=date('Y-m-d');
+
+        if (isset($data['desde'])) {
+        $desde=$data['desde'];
+        $hasta=$data['hasta'];
+
+        }
+   
+        $movimientos=DB::select("SELECT * FROM movimientostable m 
+            join categorytable c on m.cat_id=c.cat_id
+            join users s on m.usu_id=s.usu_id
+            WHERE m.mov_fecha BETWEEN '$desde' AND '$hasta'
+            ");
+
+        return view('home')
+        ->with('movimientos',$movimientos)
+        ->with('desde',$desde)
+        ->with('hasta',$hasta)
+        ;
 }
+}
+

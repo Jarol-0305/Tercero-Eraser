@@ -38,3 +38,5 @@ Route::post('/movimientos/store','MovimientosController@store')->name('movimient
 Route::get('/movimientos/edit/{mov_id}','MovimientosController@edit')->name('movimientos.edit');
 Route::post('/movimientos/update/{mov_id}','MovimientosController@update')->name('movimientos.update');
 Route::post('/movimientos/destroy/{mov_id}','MovimientosController@destroy')->name('movimientos.destroy');
+
+Route::post('/home/search','HomeController@search')->name('home.search');
