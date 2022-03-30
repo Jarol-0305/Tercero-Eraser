@@ -9,8 +9,8 @@
 <div class="container">
   
   <div class="" style="width:510px;margin-left: 40%;">
-    <label  class="form-label">Detalle del movimiento</label>
     <div class="col-md-6">
+    <label  class="form-label" for="validationServer01" >Detalle del movimiento</label>
                                 <input id="mov_detalle" type="text" class="form-control @error('mov_detalle') is-invalid @enderror" name="mov_detalle" value="{{ old('mov_detalle') }}" required autocomplete="mov_detalle" autofocus>
 
                                 @error('detalle')
@@ -22,9 +22,9 @@
   </div>
 
 <div class="" style="width:510px;margin-left: 40%;">
-    <label class="form-label">Valor del movimiento</label>
     <div class="col-md-6">
-                                <input id="mov_valor" type="number" class="form-control @error('mov_valor') is-invalid @enderror" name="mov_valor" value="{{ old('mov_valor') }}" required autocomplete="mov_valor" autofocus>
+    <label class="form-label">Valor del movimiento</label>
+                                <input type="tel" id="mov_valor" class="form-control @error('mov_valor') is-invalid @enderror" name="mov_valor" value="{{ old('mov_valor') }}" required autocomplete="mov_valor" autofocus> 
 
                                 @error('valor')
                                     <span class="invalid-feedback" role="alert">
@@ -32,11 +32,11 @@
                                     </span>
                                 @enderror
                             </div>    
-  </div>
+</div>
 
 <div class="" style="width:510px;margin-left: 40%;">
-    <label class="form-label">Fecha de categoria</label>
     <div class="col-md-6">
+    <label class="form-label">Fecha de categoria</label>
         <?php 
         $hdate=date('Y-m-d');
         ?>
@@ -48,19 +48,14 @@
                                     </span>
 
                                 @enderror
-  
-        
+    
       </div>
-      
-    </div>
+</div>
 
-<div class="" style="width:510px;margin-left: 40%;">
-    <label class="form-label">Tipo de categoria</label>
-    <div class="col-md-6">
-        
-        <select id="cat_id" class="form-control @error('cat_id') is-invalid @enderror" name="cat_id" value="{{ old('cat_id') }}" required autocomplete="cat_id" autofocus>
-
-          <option selected disabled>Elija una opcion</option>
+<div class="col-md-3" style="margin-left: 40%;">
+    <label for="validationCustom04" class="form-label">Tipo de categoria</label>
+    <select style="width: 225px;" class="form-control" id="validationCustom04" required>
+      <option selected disabled value="">Elija una opcion</option>
           @foreach($categorias as $cat)
           @if($cat->cat_tipo==1)
           <option value=" {{$cat->cat_id}} ">{{$cat->cat_nombre}} (Ingreso)</option>
@@ -69,18 +64,11 @@
           @endif
 
           @endforeach
-          
-          @error('Tipo')
-        <span class="invalid-feedback" role="alert">
-        <strong>{{ $message }}</strong>
-        </span>
-
-        @enderror
-    
-        </select>
-    
-  </div>
- </div> 
+    </select>
+    <div class="invalid-feedback">
+      Please select a valid state.
+    </div>
+</div>
 
 <br>  
 

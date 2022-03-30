@@ -11,6 +11,9 @@
                 <h1 style="font-family:cursive;font-size: 25px;">Lista de movimientos</h1>
                         
                 <a href="{{route('movimientos.create')}}" style="margin-left:63%;" class="btn btn-success">Nuevo</a>
+                
+                <button class="btn btn-danger">PDF</button>
+                
                 </div>
 <form action="{{route('home.search')}}" method="POST">
     @csrf

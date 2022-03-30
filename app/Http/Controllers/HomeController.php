@@ -25,6 +25,10 @@ class HomeController extends Controller
     public function index()
     {
         //$movimientos=Movimientos::all();
+        $pdf = App('dompdf.wrapper');
+        $pdf->loadHTML('<h1>Test</h1>');
+        // return $pdf->stream();
+
         $desde=date('');
         $hasta=date('');
         $movimientos=movimientos::all();   
