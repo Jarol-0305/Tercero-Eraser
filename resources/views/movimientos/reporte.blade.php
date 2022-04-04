@@ -1,44 +1,4 @@
-@extends('layouts.app')
-
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-11">
-            <div class="container">
-                <div class="card-header">
-                <div class="row m-1">
-                        
-                <h1 style="font-family:cursive;font-size: 25px;">Lista de movimientos</h1>
-
-<form class="row" style="margin-left: 21%" action="{{route('home.search')}}" method="POST">
-    @csrf
-
-<div class="col-md-4" style="margin-left: -3%;">
-    Desde:<input type="date" class="form-control" name="desde" value="{{$desde}}">
-</div>
-
-<div class="col-md-4" style="margin-left: -3%;">
-    Hasta<input type="date" class="form-control" name="hasta" value="{{$hasta}}">
-</div>
-
-<div class="col-md-2" style="margin-top: 4.6%;margin-left: -4%;">
-    <button type="submit" class="btn btn-info" value="btn_buscar" name="btn_buscar">Buscar</button>
-</div>
-
-<div style="margin-left: 1.5%;margin-top: 4.6%;">
-    <a href="{{route('movimientos.create')}}" style="height:38px;" name="btn_nuevo" class="btn btn-success">Nuevo</a>
-</div>
-
-
-<div style="margin-left: -3.8%;margin-top: 2.5%;">
-    <button style="height: 38px;" value="btn_pdf" class="btn btn-danger" name="btn_pdf">PDF</button>
-</div>
-                    
-</form>
-</div>
-</div>
-
-                <table class="table">
+<table class="table">
                     <th>#</th>
                     <th>Usuario</th>
                     <th>Categoria</th>
@@ -46,7 +6,7 @@
                     <th>Tipo</th>
                     <th>Valor</th>
                     <th>Fecha</th>
-                    <th>Acciones</th>
+             
                     <?php
                     $t_ing=0;
                     $t_egr=0;
@@ -94,10 +54,4 @@
     <th>Egresos:$ {{number_format($t_egr,2)}}</th>
     <th>Saldo:$ {{number_format($t_saldo,2)}}</th>
 </tr>
-                </table>   
-                </div>
-                </div> 
-            </div>
-        </div>
-    </div>
-@endsection
+                </table> 

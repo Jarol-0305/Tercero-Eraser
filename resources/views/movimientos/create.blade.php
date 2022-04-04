@@ -54,7 +54,7 @@
 
 <div class="col-md-3" style="margin-left: 40%;">
     <label for="validationCustom04" class="form-label">Tipo de categoria</label>
-    <select style="width: 225px;" class="form-control" id="validationCustom04" required>
+    <select style="width: 225px;" class="form-control" name="cat_id" id="validationCustom04" required>
       <option selected disabled value="">Elija una opcion</option>
           @foreach($categorias as $cat)
           @if($cat->cat_tipo==1)
