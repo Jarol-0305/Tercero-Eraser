@@ -1,13 +1,22 @@
 @extends('layouts.app')
 @section('content')
-<h2 class="bg-dark text-white">Lista de Usuarios</h2>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-9">
+            <div class="container">
+                <div class="card-header">
+                <div class="row m-1">
+                        
+<h1 style="font-family:cursive;font-size: 21px;">Usuarios</h1>
 
-<a href="{{route('usuarios.create')}}" class="btn btn-danger">Nuevo</a>
+<div style="margin-left: 70%;margin-top: %;">
+    <a href="{{route('usuarios.create')}}" style="height:38px;" name="btn_nuevo" class="btn btn-success">Nuevo</a>
+</div>
 
 <table class="table">
 	<th>#</th>
-	<th>nombre</th>
-	<th>cedula</th>
+	<th>Usuario</th>
+	<th>Cedula</th>
 	@foreach($users as $u)
 	<tr>
 		<td>{{$loop->iteration}}</td>
@@ -16,6 +25,12 @@
 	</tr>
 	@endforeach
 </table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 @endsection
 
 

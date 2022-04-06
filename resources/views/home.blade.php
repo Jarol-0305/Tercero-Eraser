@@ -3,12 +3,12 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-11">
+        <div class="col-md-12">
             <div class="container">
                 <div class="card-header">
                 <div class="row m-1">
                         
-                <h1 style="font-family:cursive;font-size: 25px;">Lista de movimientos</h1>
+                <h1 style="font-family:cursive;font-size: 26px;">Lista de movimientos</h1>
 
 <form class="row" style="margin-left: 21%" action="{{route('home.search')}}" method="POST">
     @csrf
@@ -25,14 +25,15 @@
     <button type="submit" class="btn btn-info" value="btn_buscar" name="btn_buscar">Buscar</button>
 </div>
 
+<div style="margin-left: 0.5%;margin-top: 4.5%;">
+    <button style="height: 38px;" value="btn_pdf" class="btn btn-danger" name="btn_pdf">PDF</button>
+</div>
+
 <div style="margin-left: 1.5%;margin-top: 4.6%;">
     <a href="{{route('movimientos.create')}}" style="height:38px;" name="btn_nuevo" class="btn btn-success">Nuevo</a>
 </div>
 
 
-<div style="margin-left: -3.8%;margin-top: 2.5%;">
-    <button style="height: 38px;" value="btn_pdf" class="btn btn-danger" name="btn_pdf">PDF</button>
-</div>
                     
 </form>
 </div>
@@ -88,7 +89,7 @@
 </td>
                 </tr>
 @endforeach
-<tr>
+<tr class="card-header" style="color: black;">
     <th colspan="2">Totales:</th>
     <th>Ingresos:$ {{number_format($t_ing,2)}}</th>
     <th>Egresos:$ {{number_format($t_egr,2)}}</th>

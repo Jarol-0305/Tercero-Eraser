@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Control de gastos</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -43,6 +43,9 @@
                     <ul class="navbar-nav mr-auto">
 
                     </ul>
+                                <a href="https://github.com/Jarol-0305/Tercero-Eraser.git" target="_blank">
+                                    <img src="https://miracomosehace.com/wp-content/uploads/2020/07/icono-de-github.jpg" style="width:60px;height:40px;margin-left: 550%;">
+                                </a>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -57,16 +60,19 @@
                                 </li>
                             @endif
                         @else
+                             
+
                             <li class="nav-item dropdown">
 
+
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    <img src="https://blog.hotmart.com/blog/2019/09/BLOG_controle-de-gastos.png" style="width: 30px;height: 30px;">
+                                    <img src="https://thumbs.dreamstime.com/b/concepto-de-control-de-gastos-91582284.jpg" style="width: 30px;height: 30px;">
                                     {{ Auth::user()->usu_usuario }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <div style="margin-left:20% ;">
-                                        <img src="https://media.cdnp.elobservador.com.uy/022019/1551281920975.jpg?&cw=350" style="width:80px ;height: 85px;">
+                                        <img src="https://thumbs.dreamstime.com/b/concepto-de-control-de-gastos-91582284.jpg" style="width:80px ;height: 85px;">
                                     </div>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();

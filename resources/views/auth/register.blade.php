@@ -26,7 +26,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('clave') }}</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Clave') }}</label>
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
@@ -59,12 +59,6 @@
                             </div>
                         </div>
 
-
-                        
-
-
-
-
                          <div class="form-group row">
                             <label for="usu_apellido" class="col-md-4 col-form-label text-md-right">{{ __('Apellido') }}</label>
 
@@ -96,7 +90,7 @@
                      
                       
                          <div class="form-group row">
-                            <label for="usu_correo" class="col-md-4 col-form-label text-md-right">{{ __('correo') }}</label>
+                            <label for="usu_correo" class="col-md-4 col-form-label text-md-right">{{ __('Correo') }}</label>
 
                             <div class="col-md-6">
                                 <input id="usu_correo" type="email" class="form-control @error('usu_correo') is-invalid @enderror" name="usu_correo" value="{{ old('usu_correo') }}" required autocomplete="usu_correo">
