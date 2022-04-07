@@ -44,7 +44,7 @@
 
                     </ul>
                                 <a href="https://github.com/Jarol-0305/Tercero-Eraser.git" target="_blank">
-                                    <img src="https://miracomosehace.com/wp-content/uploads/2020/07/icono-de-github.jpg" style="width:60px;height:40px;margin-left: 550%;">
+                                    <img src="https://miracomosehace.com/wp-content/uploads/2020/07/icono-de-github.jpg" style="width:66px;height:39px;margin-left: 495%;">
                                 </a>
 
                     <!-- Right Side Of Navbar -->
@@ -74,11 +74,7 @@
                                     <div style="margin-left:20% ;">
                                         <img src="https://thumbs.dreamstime.com/b/concepto-de-control-de-gastos-91582284.jpg" style="width:80px ;height: 85px;">
                                     </div>
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Perfil') }}
-                                    </a>
+                                    
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

@@ -39,7 +39,9 @@
 </div>
 </div>
 
-                <table class="table">
+<div class="card-body" style="overflow-y: scroll; width: 1080px;
+  height: 380px">
+                   <table class="table">
                     <th>#</th>
                     <th>Usuario</th>
                     <th>Categoria</th>
@@ -62,12 +64,13 @@
                     }
                        $t_saldo=$t_ing-$t_egr;
                     ?>
-                <tr>
+                <tr >
                     <td>{{$loop->iteration}}</td>
                     <td>{{$mov->usu_nombre}}</td>
                     <td>{{$mov->cat_nombre}}</td>
                     <td>{{$mov->mov_detalle}}</td>
                     @if($mov->cat_tipo==1)
+
 <td>Ingreso</td>
 @else
 <td>Egreso</td>
@@ -89,13 +92,20 @@
 </td>
                 </tr>
 @endforeach
-<tr class="card-header" style="color: black;">
+</table>   
+</div>
+<br>
+<div class="container">
+    
+<tr class="card-body" style="color: black;">
     <th colspan="2">Totales:</th>
     <th>Ingresos:$ {{number_format($t_ing,2)}}</th>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <th>Egresos:$ {{number_format($t_egr,2)}}</th>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <th>Saldo:$ {{number_format($t_saldo,2)}}</th>
 </tr>
-                </table>   
+</div>
                 </div>
                 </div> 
             </div>

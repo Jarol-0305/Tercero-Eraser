@@ -16,12 +16,18 @@
 <table class="table">
 	<th>#</th>
 	<th>Usuario</th>
+	<th>Nombre</th>
+	<th>Apellido</th>
 	<th>Cedula</th>
+	<th>Correo</th>
 	@foreach($users as $u)
 	<tr>
 		<td>{{$loop->iteration}}</td>
 		<td>{{$u->usu_usuario}}</td>
+		<td>{{$u->usu_nombre}}</td>
+		<td>{{$u->usu_apellido}}</td>
 		<td>{{$u->usu_cedula}}</td>
+		<td>{{$u->usu_correo}}</td>
 	</tr>
 	@endforeach
 </table>

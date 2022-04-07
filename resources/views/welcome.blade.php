@@ -80,9 +80,14 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
+            <marquee>    
+                <div class="title m-b-md" style="color: #1F618D;">
                     Control de gastos
+                <div align="center">
+                    <img width="250" height="250" src="https://us.123rf.com/450wm/sanek13744/sanek137441904/sanek13744190400337/123344799-icono-de-documento-de-auditor%C3%ADa-en-estilo-plano-ilustraci%C3%B3n-de-vector-de-informe-de-resultado-sobre-.jpg?ver=6">
                 </div>
+                </div>
+            </marquee>
                 
                 <div class="links">
                 <a href="https://github.com/Jarol-0305/Tercero-Eraser.git" target="_blank">Repositorio del programa</a>

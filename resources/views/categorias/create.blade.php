@@ -3,8 +3,9 @@
 
 
 <form action="{{route('categorias.store')}}" method="POST">
+ 
   @csrf
-  
+<div class="container col-md-8">
   <div class="" style="width:250px;margin-left: 40%;">
     <label  class="form-label">Nombre de la categoria</label>
     <input  type="text" class="form-control " id="cat_nombre" name="cat_nombre" required autocomplete="cat_nombre" autofocus aria-describedby="emailHelp">
@@ -21,6 +22,7 @@
 <br>
 
   <button type="submit" style="width:250px;margin-left: 40%;" class="btn btn-primary">Guardar</button>
+</div>  
 </form>
 
 @endsection
